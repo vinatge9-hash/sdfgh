@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&family=Playfair+Display:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niyantri Coffee - Home</title>
+  <meta name="description" content="Niyantri Coffee — a warm, inviting coffee shop serving thoughtfully crafted brews." />
+  <!-- fonts preload placeholders (load all fonts) -->
+  <link rel="preload" href=".woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href=".woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Tailwind (via CDN for this demo) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: {
+              50: '#f7f2e7',
+              100: '#efe5d0',
+              200: '#dcc7a0',
+              300: '#c4a67a',
+              400: '#a57a50',
+              500: '#8b5930',
+              600: '#744c28',
+              700: '#5f3f22',
+              800: '#4a2f1b',
+              900: '#351f14'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- placeholder for fonts usage: apply via inline style on sections -->
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="opacity-0 transition-opacity duration-1000 ease-in-out">
+  <!-- Header / Nav -->
+  <header class="w-full fixed top-0 left-0 z-50 bg-white/30 backdrop-blur-lg shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="./index.html" class="flex items-center space-x-2 text-slate-800 font-semibold">
+          <!-- coffee cup icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 8h13l1-3h-4a4 4 0 0 0-4 4v0"/>
+            <path d="M6 8h6a3 3 0 0 1 3 3v6H6"/>
+            <path d="M6 17h4"/>
+            <path d="M3 21h12"/>
+          </svg>
+          <span>Niyantri Coffee</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-slate-700">
+          <a href="./index.html" class="hover:underline">Home</a>
+          <a href="./menu.html" class="hover:underline">Menu</a>
+          <a href="./cart.html" class="hover:underline">Cart</a>
+          <a href="./about.html" class="hover:underline">About</a>
+          <a href="./contact.html" class="hover:underline">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-2">
+        <a href="./index.html" class="block px-2 py-2">Home</a>
+        <a href="./menu.html" class="block px-2 py-2">Menu</a>
+        <a href="./cart.html" class="block px-2 py-2">Cart</a>
+        <a href="./about.html" class="block px-2 py-2">About</a>
+        <a href="./contact.html" class="block px-2 py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero (full screen) -->
+  <main>
+    <section id="home" class="h-screen w-full bg-cover bg-center flex items-center justify-center" style="background-image: url('https://pixabay.com/get/g2b0b8a3517051c82a7009665eb9ab619dd804de681d41135395ef5d7a28af1e7c5429eb502e03a764a9fbc14a8781e10408c4d51050596f7086a4c5f490f5b32_640.jpg');">
+      <div class="text-center px-4" style="font-family: 'Playfair Display', serif;">
+        <h1 class="text-5xl md:text-7xl font-bold text-slate-900 drop-shadow-lg">Niyantri Coffee</h1>
+        <p class="mt-4 text-xl md:text-2xl text-slate-700 max-w-2xl mx-auto">A mindful cup, crafted with care. Sourced with integrity, roasted to perfection.</p>
+        <a href="./menu.html" class="mt-6 inline-block px-6 py-3 rounded-lg text-white font-semibold bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 transition-all duration-300 ease-in-out shadow-md">Explore Menu</a>
+      </div>
+      <div class="absolute bottom-6 left-0 right-0 flex justify-center">
+        <div class="animate-bounce text-slate-700">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-slate-800 mb-6" style="font-family: 'Playfair Display', serif;">What our customers say</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style="opacity:0;">
+            <p class="text-slate-700">"The cozy vibe and amazing pours keep me coming back."</p>
+            <footer class="mt-4 text-sm text-slate-500">- Priya, Hyderabad</footer>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style="opacity:0;">
+            <p class="text-slate-700">"Best almond latte I’ve had in ages. Highly recommended."</p>
+            <footer class="mt-4 text-sm text-slate-500">- Anson, Mumbai</footer>
+          </blockquote>
+          <blockquote class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style="opacity:0;">
+            <p class="text-slate-700">"The staff are incredibly friendly and the coffee is consistently great."</p>
+            <footer class="mt-4 text-sm text-slate-500">- Maya, Bengaluru</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white py-6 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-100 flex items-center justify-between">
+      <span>&copy; 2025 Niyantri Coffee</span>
+      <span>Designed with care in Hyderabad</span>
+    </div>
+  </footer>
+
+  <!-- Global scripts -->
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    // Page load fade-in
+    window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
+  </script>
+  <script>
+    // Scroll animation using IntersectionObserver
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animatedElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transition = 'opacity 1000ms ease-in-out';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
