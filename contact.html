@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,500,600,700&family=Playfair+Display:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niyantri Coffee - Contact</title>
+  <meta name="description" content="Get in touch with Niyantri Coffee in Hyderabad. We’d love to hear from you." />
+  <link rel="preload" href=".woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href=".woff2" as="font" type="font/woff2" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="font-family: 'Inter', sans-serif;" class="opacity-0 transition-opacity duration-1000 ease-in-out">
+  <header class="w-full fixed top-0 left-0 z-50 bg-white/30 backdrop-blur-lg shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="./index.html" class="flex items-center space-x-2 text-slate-800 font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 8h13l1-3h-4a4 4 0 0 0-4 4v0"/>
+            <path d="M6 8h6a3 3 0 0 1 3 3v6H6"/>
+            <path d="M6 17h4"/>
+            <path d="M3 21h12"/>
+          </svg>
+          <span>Niyantri Coffee</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-slate-700">
+          <a href="./index.html" class="hover:underline">Home</a>
+          <a href="./menu.html" class="hover:underline">Menu</a>
+          <a href="./cart.html" class="hover:underline">Cart</a>
+          <a href="./about.html" class="hover:underline">About</a>
+          <a href="./contact.html" class="hover:underline">Contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-2">
+        <a href="./index.html" class="block px-2 py-2">Home</a>
+        <a href="./menu.html" class="block px-2 py-2">Menu</a>
+        <a href="./cart.html" class="block px-2 py-2">Cart</a>
+        <a href="./about.html" class="block px-2 py-2">About</a>
+        <a href="./contact.html" class="block px-2 py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-start">
+      <div class="animate-on-scroll" style="opacity:0;">
+        <h1 class="text-4xl font-bold text-slate-900" style="font-family: 'Playfair Display', serif;">Get in touch</h1>
+        <p class="text-slate-700 mt-2">We’d love to hear from you. Reach us at the location below or fill the form.</p>
+        <p class="text-slate-600 mt-4"><strong>Address:</strong> 123 Aroma Ave, Hyderabad, Telangana, India</p>
+        <p class="text-slate-600"><strong>Phone:</strong> +91 40 1234 5678</p>
+      </div>
+      <form class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" style="opacity:0;" action="#" method="post">
+        <div class="mb-4">
+          <label class="block text-sm mb-1">Your Name</label>
+          <input class="w-full border rounded px-3 py-2" type="text" required />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm mb-1">Email</label>
+          <input class="w-full border rounded px-3 py-2" type="email" required />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm mb-1">Message</label>
+          <textarea class="w-full border rounded px-3 py-2" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white py-6 mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-100 flex items-center justify-between">
+      <span>&copy; 2025 Niyantri Coffee</span>
+      <span>Hyderabad, India</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => { menu?.classList.toggle('hidden'); });
+  </script>
+  <script>window.addEventListener('load', () => document.body.classList.remove('opacity-0'));</script>
+  <script>
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting){ entry.target.style.opacity='1'; observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+    animatedElements.forEach(el => { el.style.opacity='0'; el.style.transition='opacity 1000ms ease-in-out'; observer.observe(el); });
+  </script>
+</body>
+</html>
